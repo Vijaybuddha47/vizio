@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=1920, user-scalable=no'>
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="lib/player/mediaelementplayer.css">
+
+    <script src="lib/navigation/jquery.min.js"></script>
+    <script src="lib/navigation/lodash.min.js"></script>
+    <script src="lib/navigation/spatial_navigation.js"></script>
+    <script src="lib/player/mediaelement-and-player.js"></script>
+    <script src="lib/marquee/jquery.marquee.js"></script>
+</head>
+
+<body>
+    <div class="splash-screen"></div>
+    <div class="container_box">
+        <!-- background img box -->
+        <img src="" class="background_img">
+        <!-- Start of header box -->
+        <div class="menu_container">
+            <div class="menu_list" id="menuList">
+                <!--Menu list-->
+            </div>
+        </div>
+        <!-- End of header box -->
+
+        <!-- Home screen start -->
+        <div class="main_container">
+            <!-- Start of home container list -->
+            <div class="home_container">
+                <div class="home_containerbox">
+                    <div class="home_container_list" id="homeList">
+                        <!--Home Items row-->
+                    </div>
+                </div>
+            </div>
+            <!-- End of home container list -->
+
+            <!--Start of category container -->
+            <div class="category_containebox cat_container">
+                <div class="catergory_container_list" id="catList">
+                    <!--Category Grid-->
+                </div>
+            </div>
+            <!--End of category container -->
+
+            <!-- about container -->
+            <div class="about_container" id="aboutContainer">
+                <!-- about text comes here -->
+            </div>
+            <!-- end about container -->
+
+            <!-- Start of Search container -->
+            <div class="search_container" id="searchContainer"></div>
+            <div class="search_box" id="searchBox"></div>
+            <!-- end of Search container -->
+
+            <!-- Start of detail container -->
+            <div class="detail_container subcat_container">
+                <!-- Start of detail left -->
+                <div class="detail_left" id="detail_left">
+                    <div class="thumbnail_playicon_container" id="subCatPlayIconContainer">
+                        <img src="images/play_icon.png" id="subCatPlayIcon" class="focusable">
+                    </div>
+                    <div class="image_sub_container">
+                        <img src="images/vod_default.png" class="category_img" id="subCatImg"
+                            onerror="image_error(this);">
+                        <div class="podcast_container_box" id="audioSection">
+                            <div class="audio_container focusable" tabindex="6" data-sn-right='null' data-sn-left='null'
+                                data-sn-up='null' data-sn-down='null' id="audio_container"></div>
+                        </div>
+                    </div>
+                    <div class="category_paragraph">
+                        <h2 id="subCatgHeading">
+                            <!-- Category Title -->
+                        </h2>
+                        <p id="subCatDesc">
+                            <!-- Description -->
+                        </p>
+                    </div>
+                </div>
+                <!-- End of detail left -->
+
+                <!-- Start of detail right -->
+                <div class="detail_right">
+                    <div class="detail_box">
+                        <div class="detail_box_list" id="subcatList">
+                            <!--Video Titles-->
+                        </div>
+                    </div>
+                </div>
+                <!-- End of detail right -->
+            </div>
+            <!-- End of detail container -->
+        </div>
+        <!-- Home screen end -->
+
+        <!-- Start of loader screen -->
+        <div class="loader_page" id="loader" style="display:none">
+            <div class="loader_text">loading...</div>
+        </div>
+        <!-- End of loader screen -->
+
+        <!-- Start of loader screen -->
+        <div class="loader_page error_container" id="errorContainer" style="display:none">
+        </div>
+        <!-- End of loader screen -->
+
+        <!-- Start of keyboard -->
+        <div class="keyboard_container" id="keyboard_container" style="display:none">
+            <div class="v-keyboard" id="keyboard">
+                <div class="v-keys-box">
+                    <div class="v-keys focusable" tabindex="10" data-sn-up="null" data-sn-left="#key_0" id="key_1">1
+                    </div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-up="null" id="key_2">2</div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-up="null" id="key_3">3</div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-up="null" id="key_4">4</div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-up="null" id="key_5">5</div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-up="null" id="key_6">6</div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-up="null" id="key_7">7</div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-up="null" id="key_8">8</div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-up="null" id="key_9">9</div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-up="null" data-sn-right="#key_1" id="key_0">0
+                    </div>
+                    <div class="v-keys key-letters focusable" tabindex="10" data-sn-left="#key_p" id="key_q">q</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_w">w</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_e">e</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_r">r</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_t">t</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_y">y</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_u">u</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_i">i</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_o">o</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" data-sn-right="#key_q" id="key_p">p</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" data-sn-left="#key_hyphen" id="key_a">a
+                    </div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_s">s</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_d">d</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_f">f</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_g">g</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_h">h</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_j">j</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_k">k</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_l">l</div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-right="#key_a" id="key_hyphen">-</div>
+                    <div class="v-keys width142 special-function focusable" tabindex="10" data-sn-left="#key_underscore"
+                        id="key_caps" data-type="CASE">
+                        Caps</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_z">z</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_x">x</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_c">c</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_v">v</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_b">b</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_n">n</div>
+                    <div class="v-keys key-letters focusable" tabindex="10" id="key_m">m</div>
+                    <div class="v-keys focusable" tabindex="10" data-sn-right="#key_caps" id="key_underscore">_</div>
+                    <div class="v-keys width142 special-function CLS focusable" tabindex="10" data-sn-left="#key_enter"
+                        data-sn-down="null" id="key_clear" data-type="CLEAR">
+                        <span>Clear</span>
+                    </div>
+                    <div class="v-keys width142 special-function focusable" tabindex="10" data-sn-down="null"
+                        id="key_clearall" data-type="CLEARALL"><span>Clear
+                            All</span></div>
+                    <div class="v-keys width142 special-function focusable" tabindex="10" data-sn-down="null"
+                        id="key_space" data-type="SPACE">Space
+                    </div>
+                    <div class="v-keys width142 special-function BCK focusable" tabindex="10" data-sn-down="null"
+                        id="key_back" data-type="BACK">Back
+                    </div>
+                    <div class="v-keys width142 special-function focusable" tabindex="10" data-sn-down="null"
+                        data-sn-right="#key_clear" id="key_enter" data-type="ENTER">Enter</div>
+                </div>
+            </div>
+        </div>
+        <!-- End of custom keyboard -->
+
+    </div>
+
+    <!-- Start of Video container -->
+    <div id="videoSection">
+        <div class="video-container video_container focusable" tabindex="4" data-sn-right='null' data-sn-left='null'
+            data-sn-up='null' data-sn-down='null' id="video_container"></div>
+    </div>
+    <!-- End of video container -->
+
+    <!-- Start of popup screen -->
+    <span id="modal_container" class="modal_container">
+        <!-- Html file will come here -->
+    </span>
+    <!-- End popup screen -->
+
+    <script src="js/config.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/home.js" type="text/javascript"></script>
+    <script src="js/navigation.js" type="text/javascript"></script>
+    <script src="js/popup.js" type="text/javascript"></script>
+    <script src="js/video.js" type="text/javascript"></script>
+    <script src="js/audio.js" type="text/javascript"></script>
+    <script src="js/magicRemoteEventListeners.js" type="text/javascript"></script>
+    <script src="js/vizio-event.js" type="text/javascript"></script>
+    <script src="js/add-numbers-key.js" type="text/javascript"></script>
+    <script src="http://localhost:12345/scfs/cl/js/vizio-companion-lib.js"></script>
+
+</body>
+
+</html>

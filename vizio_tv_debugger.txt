@@ -1,0 +1,32 @@
+Steps: (https://docs.developer.vizio.com/docs/side-load) V!Z!0@976
+
+UserName: developer@fusionitechnologies.com
+Password:NewDay@123
+
+1. Enter 10.1.1.55:9555 (TV ip)
+
+
+2.replace first part with devtools://devtools/bundled/inspector.html?ws=10.1.1.55:9555/devtools/page/8A2314500326CF73DA4A4FBDE2FBFC2D
+ https://chrome-devtools-frontend.appspot.com/serve_rev/@9f05d1d9ee7483a73e9fe91ddcb8274ebcec9d7f/inspector.html ==> devtools://devtools/bundled/inspector.html
+
+devtools://devtools/bundled/inspector.html?ws=10.1.1.55:9555/devtools/page/8A2314500326CF73DA4A4FBDE2FBFC2D
+
+3. window.location.href="http://web.fusionitechnologies.com/vizio/dittytv/"
+
+
+devtools://devtools/bundled/inspector.html?ws=10.1.1.55:9555/devtools/page/B71EBD0EA51149D76673354CE81557FD
+
+
+
+Necessory features for Vizio TV
+
+1. WAI-ARIA: Text to speech
+2. Keyboard: 
+3. GEO:
+4. APP Version:
+5. Service outage and detection:
+6. Video player buffer size:
+7. Single video player:
+8. AVOD(IFA ID):
+9. Deep linking inetegration:
+10.Apply lazy loading:

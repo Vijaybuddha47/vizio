@@ -1,0 +1,259 @@
+@media only screen and (min-width: 768px) {
+
+    .main_container {
+        position: absolute;
+        width: 1280px;
+        height: 720px;
+    }
+
+    /* Start of menu */
+    .menu_list .menu_list_box {
+        padding: 15px 36px;
+        font-size: 25px;
+    }
+
+    /* End of menu */
+
+    /* Start of home screen */
+    .container_box,
+    .background_img {
+        width: 1280px;
+        height: 720px;
+    }
+
+    .home_containerbox {
+        padding: 330px 15px 0px 16px;
+    }
+
+    .home_container_list {
+        /* margin-left: 145px; */
+    }
+
+    .home_container_list div {
+
+        /* margin: 0px 17px; */
+        margin: 0px 19px 0px 17px
+
+    }
+
+    .home_contentbox img {
+        width: 390px;
+        height: 240px;
+    }
+
+    .home_textlist {
+        font-size: 20px;
+        width: 390px;
+    }
+
+    .home_container_list .home_listbox:focus {
+        border: none;
+        outline: none;
+    }
+
+    /* End of home screen */
+
+    /* Start of category screen */
+    .category_containebox {
+        width: 1278px;
+        height: 540px;
+        margin-top: 0;
+        bottom: 230px;
+    }
+
+    .catergory_container_list div.category_innerbox {
+        width: 330px;
+        height: 200px;
+        margin: 35px 46px;
+    }
+
+    .catergory_container_list div .category_box {
+        width: 330px;
+        height: 220px;
+    }
+
+    .catergory_container_list div .category_box img {
+        width: 330px;
+        height: 190px;
+    }
+
+    .category_textlist {
+        font-size: 20px;
+        width: 330px;
+    }
+
+    /* End of category screen */
+
+    /* Start of sub-category screen */
+    .subcat_container {
+        width: 1250px;
+        height: 720px;
+        padding: 100px 30px 0px 0px;
+    }
+
+    .detail_left {
+        width: 500px;
+    }
+
+    .image_sub_container {
+        text-align: left;
+        width: 400px;
+        height: 300px;
+    }
+
+    .category_img {
+        width: 100%;
+        height: 230px;
+        margin-top: 50px;
+    }
+
+    .category_paragraph {
+        position: relative;
+        height: 170px;
+        top: 25px;
+    }
+
+    .category_paragraph h2 {
+        width: 500px;
+        margin-top: 5px;
+        font-size: 24px;
+    }
+
+    .category_paragraph p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .detail_box {
+        width: 585px;
+        height: 440px;
+    }
+
+    .detail_box_list div.detail_list_text {
+        width: 500px;
+    }
+
+    .sub_title_container {
+        width: 500px;
+        font-size: 22px;
+    }
+
+    .detail_right {
+        margin-top: 45px;
+    }
+
+    .podcast_sub_title,
+    .video_sub_title {
+        width: 470px;
+    }
+
+    .thumbnail_playicon_container {
+        position: absolute;
+        z-index: 2;
+        width: 390px;
+        text-align: center;
+        top: 27%;
+    }
+
+    .thumbnail_playicon_container img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* End of sub-category screen */
+
+    /* Start of search/about screen screen */
+    .about_container {
+        margin-top: 250px;
+    }
+
+    .search_input {
+        width: 1002px;
+    }
+
+    .thumbnail_playicon_container {
+        width: 392px;
+        top: 25%;
+        /* top: 33%; */
+    }
+
+    /* End of search/about screen screen */
+
+    /* Start of popup css */
+    .exit_modal {
+        width: 670px;
+    }
+
+    .exit_modal_show {
+        top: 12.5%;
+    }
+
+    .no_button,
+    .yes_button {
+        width: 210px;
+        height: 50px;
+        text-align: center;
+        font-size: 34px;
+    }
+
+    .popup_headline {
+        font-size: 35px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .search_image_sub_container {
+        height: 476px;
+        width: 400px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .search_result_container .search_image_sub_container {
+        height: 265px;
+    }
+
+    .search_result_container .detail_left {
+        margin-left: 15px;
+        margin-right: 45px;
+    }
+
+    .search_container {
+        display: none;
+        margin-top: 30px;
+    }
+
+    .search_result_container {
+        height: 500px;
+        top: 0;
+        overflow: hidden;
+    }
+
+    .search_result_container .search_detail_box {
+        width: 585px;
+        height: 440px;
+    }
+
+    .search_result_container .category_paragraph {
+        left: 50px;
+    }
+
+    .search_result_container .thumbnail_playicon_container {
+        top: 44%;
+        left: 21%;
+        transform: translate(-50%, -50%);
+        height: unset !important;
+    }
+
+    .search_box{
+        position: relative;
+        top: 12%;
+    }
+
+    .about_box {
+        height: 450px;
+    }
+
+    /* End of popup css */
+}
+
